@@ -3,8 +3,9 @@ import googlemaps  # pip install googlemaps
 import sqlite3
 import random
 import cohere
-co = cohere.Client('YOUR_COHERE_API_KEY')
 
+COHERE_KEY = open('../cohere_api.txt').read()
+co = cohere.Client(COHERE_KEY)
 def km_to_meters(km):
     try:
         return km * 1000
